@@ -1,0 +1,38 @@
+{{ define "main" }} {{ $pages := .Pages }} {{ $paginator := .Paginate .Site.RegularPages }}
+<section class="intro">
+	<p class="eyebrow">
+		{{ if .IsHome }}A personal space{{ else }}Browse the collection{{ end }}
+	</p>
+	<h1>{{ if .IsHome }}Notes worth keeping.{{ else }}{{ .Title }}{{ end }}</h1>
+	<p>
+		{{ if .IsHome }}A quiet collection of ideas, observations, and things to
+		remember.{{ else }}Explore every entry gathered here.{{ end }}
+	</p>
+</section>
+
+{{ if .IsHome }}
+<section class="post-list" aria-label="Posts">
+	{{ range $paginator.Pages }}
+	<article class="post-card">
+		<p class="post-date">{{ .Date.Format "02 Jan 2006" }}</p>
+		<h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+		<p>{{ .Summary | plainify | truncate 170 }} {{ if .Truncated }}...{{ end }}</p>
+		<div class="post-categories">
+			{{ range (.GetTerms "categories") }}
+			<div class="post-categories__item">
+				<p class="category_name">
+					<a href="{{ .RelPermalink }}">{{ .Name }}</a>
+				</p>
+			</div>
+			{{ end }}
+		</div>
+		<a class="read-more" href="{{ .RelPermalink }}"
+			>Read note <span aria-hidden="true">→</span></a
+		>
+	</article>
+	{{ else }}
+	<p class="empty-state">Nothing has been published here yet.</p>
+	{{ end }}
+</section>
+{{ partial "pagination.html" . }} {{ end }}
+{{ end }}

@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		{{ $sass := resources.Get "scss/main.sass" }} {{ $style := $sass |
+		css.Sass (dict "transpiler" "dartsass") | minify | fingerprint }}
+		<link
+			rel="stylesheet"
+			href="{{ $style.RelPermalink }}"
+			integrity="{{ $style.Data.Integrity }}"
+		/>
+		<title>
+			{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} · {{
+			.Site.Title }}{{ end }}
+		</title>
+	</head>
+	<body>
+		<div class="site-shell">
+			{{ partial "navbar" . }}
+			<main>{{ block "main" . }} {{ end }}</main>
+			{{ partial "footer" . }}
+		</div>
+	</body>
+</html>

@@ -1,0 +1,23 @@
+{{ define "main" }}
+<section class="intro">
+	<p class="eyebrow">Browse the collection</p>
+	<h1>{{ .Title }}</h1>
+	<p>Explore every entry gathered here.</p>
+</section>
+
+<section class="categories-list" aria-label="Posts">
+	{{ if eq .RelPermalink "/categories/" }}
+	<div class="categories_container">
+		{{ range $.Site.Taxonomies.categories.ByCount }}
+		<div class="post-categories__item">
+			<p class="category_name">
+				<a href="{{ .Page.RelPermalink }}">{{ .Name }} {{ .Count }}</a>
+			</p>
+		</div>
+		{{ else }}
+		<p>No categories.</p>
+		{{ end }}
+	</div>
+	{{ end }}
+</section>
+{{ end }}

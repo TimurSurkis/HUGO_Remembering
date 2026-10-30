@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Test_sdfcat on Rememberin</title>
+		<link>http://localhost:1313/categories/test_sdfcat/</link>
+		<description>Recent content in Test_sdfcat on Rememberin</description>
+		<generator>Hugo</generator>
+		<language>en-us</language>
+		
+		
+		
+		
+			<lastBuildDate>Mon, 26 Oct 2026 19:19:00 +0100</lastBuildDate>
+		
+			<atom:link href="http://localhost:1313/categories/test_sdfcat/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>My First Post</title>
+				<link>http://localhost:1313/my-first-post-copy/</link>
+				<pubDate>Mon, 26 Oct 2026 19:19:00 +0100</pubDate>
+				<guid>http://localhost:1313/my-first-post-copy/</guid>
+				<description>&lt;p&gt;This is an md post&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

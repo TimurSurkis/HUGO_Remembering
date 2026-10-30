@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Rememberin</title>
+		<link>http://localhost:1313/</link>
+		<description>Recent content on Rememberin</description>
+		<generator>Hugo</generator>
+		<language>en-us</language>
+		
+		
+		
+		
+			<lastBuildDate>Mon, 26 Oct 2026 19:19:00 +0100</lastBuildDate>
+		
+			<atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>My First Post</title>
+				<link>http://localhost:1313/my-first-post-copy-2/</link>
+				<pubDate>Mon, 26 Oct 2026 19:19:00 +0100</pubDate>
+				<guid>http://localhost:1313/my-first-post-copy-2/</guid>
+				<description>&lt;p&gt;This is an md post&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>My First Post</title>
+				<link>http://localhost:1313/my-first-post-copy/</link>
+				<pubDate>Mon, 26 Oct 2026 19:19:00 +0100</pubDate>
+				<guid>http://localhost:1313/my-first-post-copy/</guid>
+				<description>&lt;p&gt;This is an md post&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>My First Post</title>
+				<link>http://localhost:1313/my-first-post/</link>
+				<pubDate>Mon, 26 Oct 2026 19:19:00 +0100</pubDate>
+				<guid>http://localhost:1313/my-first-post/</guid>
+				<description>&lt;p&gt;This is an md post&#xA;HELLLOODFODOHELLLOODFODOHELLLOODFODOHELLLOODFODOHELLLOODFODOHELLLOODFODOHELLLOODFODOHELLLOODFODOHELLLOODFODOHELLLOODFODOHELLLOODFODOHELLLOODFODOHELLLOODFODOHELLLOODFODOHELLLOODFODOHELLLOODFODOHELLLOODFODOHELLLOODFODOHELLLOODFODOHELLLOODFODOHELLLOODFODOHELLLOODFODOHELLLOODFODOHELLLOODFODOHELLLOODFODOHELLLOODFODOHELLLOODFODOHELLLOODFODO&lt;/p&gt;&#xA;&lt;h2 id=&#34;test&#34;&gt;Test&lt;/h2&gt;&#xA;&lt;p&gt;This is the text I don&amp;rsquo;t know what to write so I&amp;rsquo;m typing some shi&amp;rsquo; hoping no one will ever read it.&#xA;This is the text I don&amp;rsquo;t know what to write so I&amp;rsquo;m typing some shi&amp;rsquo; hoping no one will ever read it.&#xA;This is the text I don&amp;rsquo;t know what to write so I&amp;rsquo;m typing some shi&amp;rsquo; hoping no one will ever read it.&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

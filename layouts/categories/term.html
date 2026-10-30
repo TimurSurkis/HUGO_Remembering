@@ -1,0 +1,38 @@
+{{ define "main" }}
+<section class="intro">
+	<p class="eyebrow">Browse the collection</p>
+	<h1>{{ .Page.Title | urlize }}</h1>
+	<p>Explore every post in this category.</p>
+</section>
+
+
+{{ $category := .Page.Title | urlize }}
+{{ $pages := (index .Site.Taxonomies.categories $category).Pages }}
+{{ $paginator := .Paginate $pages }}
+
+<section class="post-list" aria-label="Posts">
+    {{ range $paginator.Pages  }}
+        <article class="post-card">
+            <p class="post-date">{{ .Date.Format "02 Jan 2006" }}</p>
+            <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+            <p>{{ .Summary | plainify | truncate 170 }} {{ if .Truncated }}...{{ end }}</p>
+            <div class="post-categories">
+                {{ range (.GetTerms "categories") }}
+                <div class="post-categories__item">
+                    <p class="category_name">
+                        <a href="{{ .RelPermalink }}">{{ .Name }}</a>
+                    </p>
+                </div>
+                {{ end }}
+            </div>
+            <a class="read-more" href="{{ .RelPermalink }}"
+                >Read note <span aria-hidden="true">→</span></a
+            >
+        </article>
+
+    {{ else }}
+    <p>No posts with such category.</p>
+    {{ end }}
+</section>
+{{ partial "pagination.html" . }}
+{{ end }}

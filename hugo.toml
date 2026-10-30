@@ -1,0 +1,8 @@
+baseURL = 'https://example.org/'
+locale = 'en-us'
+title = 'Rememberin'
+
+[pagination]
+pagerSize = 2
+path = "page"
+disableAliases = false
